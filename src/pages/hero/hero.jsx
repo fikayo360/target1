@@ -9,13 +9,14 @@ import { useInView } from 'react-intersection-observer';
 export function Hero(){
     const [navActive,setNavActive] = useState(false)
     const [ref, inView] = useInView();
+
     const toggleMobileNav = () => {
        setNavActive((prev) => !prev)
     }
 
     return (
         <section id="hero">
-           { navActive? (<div id='navMobile' onClick={toggleMobileNav} ref={ref} className={`${inView?'animate__animated animate__fadeInDown animate__slow animate__delay-4s':''}`}>
+           { navActive? (<div id='navMobile' onClick={toggleMobileNav} ref={ref} className={`${inView?'animate__animated animate__fadeInDown animate__slow':''}`}>
                 <header>
                     <h1>wilson</h1>
                     <img src='./close.png'/>
